@@ -1,11 +1,14 @@
 import pygame as pg
 from squad.config import *
 
-class Wall(pg.sprite.Sprite):
+from typing import Tuple
+
+class Pieces(pg.sprite.Sprite):
     def __init__(self, game, x, y, player_no):
         self.groups = game.all_sprites
         pg.sprite.Sprite.__init__(self, self.groups)
         self.game = game
+
         # self.image = pg.Surface((TILESIZE, TILESIZE))
         if player_no == 1:
             image_path = "./src/images/circle.png"
@@ -20,3 +23,14 @@ class Wall(pg.sprite.Sprite):
         self.y = y
         self.rect.x = x * TILESIZE
         self.rect.y = y * TILESIZE
+
+class Pawn:
+    def __init__(self, initial_location: Tuple):
+        assert type(initial_location) == tuple
+        self.location = initial_location
+        self.is_death = False
+        self.is_moved = False
+
+    def move(self, to_move: Tuple):
+        assert type(to_move) == tuple
+        self.location = to_move

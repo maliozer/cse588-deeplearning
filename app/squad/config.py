@@ -28,7 +28,6 @@ BGCOLOR = DARKGREY
 
 # GAME BOARD CONFIGS
 
-P1_PIECE_COORDINATES = [(0, 0), (0, 2), (6, 4), (6, 6)]
-P2_PIECE_COORDINATES = [(0, 4), (0, 6), (6, 0), (6, 2)]
-
+P1_PIECE_COORDINATES = [(0, 0), (2, 0), (4, 6), (6, 6)]
+P2_PIECE_COORDINATES = [(4, 0), (6, 0), (0, 6), (2, 6)]
 

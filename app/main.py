@@ -9,6 +9,3 @@ if __name__ == "__main__":
 
     game = sq.game.Game()
 
-
-
-
